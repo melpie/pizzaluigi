@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 28, 2014, 3:52:21 PM
+    Author     : pieter.mels
+*/
+
+body {
+    font-family: Verdana;
+}
+    
+dd, dt {
+    margin-left: 0;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+ul.zebra li:nth-child(even) {
+    background-color: #efefef;
+    list-style: none;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+}
+
+ul.zebra li:nth-child(odd) {
+    background-color: #c6d1dd;
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+}
+
+ul.menu li {
+    display: inline;
+}
+
+.fout {
+    color: red;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+span.fout {
+    margin-left: 0.5em;
+}
+
+ul.zonderbolletjes {
+    list-style: none;
+}
+
+input[type='checkbox'] {
+    display: inline;
+}

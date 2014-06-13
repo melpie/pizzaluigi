@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>
+        Pizza Luigi
+    </display-name>
+
+    <welcome-file-list>
+        <welcome-file>welkom.htm</welcome-file>
+    </welcome-file-list>
+    
+    <context-param>
+        <param-name>voornaam</param-name>
+        <param-value>Mario</param-value>
+    </context-param>
+    <context-param>
+        <param-name>familienaam</param-name>
+        <param-value>Pizzeroni</param-value>
+    </context-param>
+    <context-param>
+        <param-name>aantalKinderen</param-name>
+        <param-value>7</param-value>
+    </context-param>
+    <context-param>
+        <param-name>gehuwd</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    
+    <filter>
+        <filter-name>ServletFilter</filter-name>
+        <filter-class>be.vdab.filters.ServletFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    
+    <filter-mapping>
+        <filter-name>ServletFilter</filter-name>
+        <url-pattern>*.htm</url-pattern>
+    </filter-mapping>
+    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/JSP/404.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <exception-type>be.vdab.dao.DAOException</exception-type>
+        <location>/WEB-INF/JSP/daoexception.jsp</location>
+    </error-page>
+    
+<!--
+    <servlet>
+        <servlet-name>welkomservlet</servlet-name>
+        <servlet-class>be.vdab.servlets.WelkomServlet</servlet-class>
+        <init-param>
+            <param-name>voornaam</param-name>
+            <param-value>Luigi</param-value>
+        </init-param>
+        <init-param>
+            <param-name>familienaam</param-name>
+            <param-value>Pizzeroni</param-value>
+        </init-param>
+        <init-param>
+            <param-name>aantalKinderen</param-name>
+            <param-value>7</param-value>
+        </init-param>
+        <init-param>
+            <param-name>gehuwd</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+       
+    <servlet>
+        <servlet-name>PizzasServlet</servlet-name>
+        <servlet-class>be.vdab.servlets.PizzasServlet</servlet-class>
+    </servlet>
+-->
+</web-app>

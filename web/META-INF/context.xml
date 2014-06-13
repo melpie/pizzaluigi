@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/pizzaluigi">
+    <Resource name="jdbc/pizzaluigi"
+    type="javax.sql.DataSource"
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/pizzaluigi"
+    username="java"
+    password="java"
+    auth="Container"
+    factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+    validationInterval="3600000"
+    testOnBorrow="true"
+    validationQuery="select 1"/>
+</Context>
